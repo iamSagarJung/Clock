@@ -1,0 +1,142 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+}
+body{
+    height:100vh;
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(180deg, #33ccff 0%, #ff99cc 80%);
+}
+
+.container{
+    background:linear-gradient(165deg,#a770ef,#cf8bf3,#fdb99b);
+    height:400px;
+    width:400px;
+    border-radius: 50%;
+    animation:animate 1.5s linear infinite;
+
+}
+.clock .numbers div{    
+    background:linear-gradient(165deg,#ffffff,#f7f7f7,#cccccc);
+     -webkit-background-clip:text;
+    -webkit-text-fill-color: transparent;
+    animation:animate 1.5s linear infinite; 
+
+}
+@keyframes animate{
+    100%{
+        filter:hue-rotate(360deg)
+    }
+}
+.clock{
+    position: absolute;
+     top:50%; 
+    left:50%;
+    transform: translate(-50%,-50%); 
+    height:380px;
+    width:380px;
+    background-color: rgb(36, 33, 33);
+    background-position: center;
+    background-size: cover;
+    border-radius: 50%;
+    /* opacity: 0; */
+    
+}
+
+
+.numbers .twelve{
+    position:absolute;
+    left:50%;
+    transform: translate(-50%);
+    padding:5px;
+    font-size: 2.5rem;
+    color:#fff;
+    font-weight: bold;
+}
+
+.numbers .nine{
+    position:absolute;
+    color:#fff;
+    top:50%;
+    transform: translate(-50%);
+    font-size: 2.5rem;
+    font-weight:bold;
+    padding-left:25px;
+
+}
+
+.numbers .three{
+    position:absolute;
+    color:#fff;
+    left:100%;
+    top:50%;
+    transform: translate(-50%);
+    font-size: 2.5rem;
+    font-weight:bold;
+    padding-right:25px;
+
+}
+
+.numbers .six{
+    position:absolute;
+    top:88%;
+    left:50%;
+    transform: translate(-50%);
+    font-size: 2.5rem;
+    color:#fff;
+    font-weight: bold;
+    
+}
+.arrows {
+    width: inherit;
+    height: inherit;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+  }
+  .arrows::before {
+    content: "";
+    width: 2.5rem;
+    height: 2.5rem;
+    background-color: #fff;
+    border-radius: 50%;
+    box-shadow: 0.2rem 0.2rem 0.5rem #777;
+    z-index: 100;
+
+  }
+
+  .arrows div {
+    width: 0.7rem;
+    height: 13rem;
+    background-color: #f8e800;
+    position: absolute;
+    bottom: 50%;
+    box-shadow: 0.2rem 0.2rem 0.5rem #777;
+    border-radius: 100% 100% 0 0;
+    transform-origin: bottom center;
+    color:white;
+    
+
+  }
+  .arrows .hour {
+    height: 9rem;
+    transform: rotate(90deg);
+  }
+
+  .arrows .second {
+      height:11.5rem;
+    background-color: #f7b195;
+    transform: rotate(270deg);
+  }
+.arrows .minute{
+    height:10rem
+}
